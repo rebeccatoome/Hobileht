@@ -1,0 +1,23 @@
+{
+  "name": "hobileht",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rebeccatoome/Hobileht.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rebeccatoome/Hobileht/issues"
+  },
+  "homepage": "https://github.com/rebeccatoome/Hobileht#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}
