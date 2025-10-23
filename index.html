@@ -20,20 +20,20 @@
 
     .display-1 {
       font-family: 'Oswald', sans-serif;
-      font-size: 80px;
+      font-size: 150px;
       font-weight: bold;
       display: block;    /* Make span behave like block so text-align works */
       text-align: center;
     }
-    
+
     .display-2 {
-      font-family: 'Oswald', sans-serif;
-      font-size: 30px;
-      font-weight: bold;
-      grid-auto-flow: column;
-      position: relative;
-      left: -280px;  /* move 20px to the left */
-    }
+  font-family: 'Oswald', sans-serif;
+  font-size: 60px;  
+  margin-right: 60px;     /* space between titles */
+  display: inline-block;
+  text-align: left;  /* align children to the left */
+}
+
 
   </style>
 </head>
@@ -44,7 +44,7 @@
     <div class="hero-wrapper">
       <picture>
         <source srcset="img/pomegranate-background.png" type="image/png" />
-        <img src="img/pomegranate-background.png" alt="Pomegranate image" class="hero-image" style="width: 100%; height: 200px; object-fit: cover; object-position: center 17.5%;" />
+        <img src="img/pomegranate-background.png" alt="Pomegranate image" class="hero-image" style="width: 100%; height: 600px; object-fit: cover; object-position: center 23%;" />
       </picture>
     </div>
   </header>
