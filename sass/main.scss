@@ -49,6 +49,33 @@ body {
   }
 }
 
+.icon-row {
+  position: absolute;
+  top: 610px;          /* move up or down — smaller number = higher */
+  right: 40px;         /* distance from right edge */
+  display: flex;
+  gap: 60px;           /* space between icons */
+  background: transparent;
+  padding: 10px;
+  z-index: 10;         /* ensure it stays above background elements */
+}
+
+.icon {
+  width: 80px;         /* bigger size */
+  height: 80px;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.2s;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.icon:hover {
+  color: #0056b3 !important;
+  transform: scale(1.1);  /* subtle hover zoom */
+}
+
 
 
 
