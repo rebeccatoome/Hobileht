@@ -20,8 +20,21 @@
 
     .display-1 {
       font-family: 'Oswald', sans-serif;
-      font-size: 120px;
+      font-size: 80px;
+      font-weight: bold;
+      display: block;    /* Make span behave like block so text-align works */
+      text-align: center;
     }
+    
+    .display-2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 30px;
+      font-weight: bold;
+      grid-auto-flow: column;
+      position: relative;
+      left: -280px;  /* move 20px to the left */
+    }
+
   </style>
 </head>
 
@@ -31,7 +44,7 @@
     <div class="hero-wrapper">
       <picture>
         <source srcset="img/pomegranate-background.png" type="image/png" />
-        <img src="img/pomegranate-background.png" alt="Pomegranate image" class="hero-image" />
+        <img src="img/pomegranate-background.png" alt="Pomegranate image" class="hero-image" style="width: 100%; height: 200px; object-fit: cover; object-position: center 17.5%;" />
       </picture>
     </div>
   </header>
@@ -39,13 +52,13 @@
   <main class="container">
     <h1><span class="display-1">HOBILEHT</span></h1>
     <nav class="navigatsioon nav_stiil" aria-label="Põhinavigatsioon">
-      <a href="#sissejuhatus">Sissejuhatus</a>
-      <a href="#Minust">Minust</a>
-      <a href="#Digikunst-ja-joonistamine">Digikunst ja joonistamine</a>
-      <a href="#Elektrikitarr">Elektrikitarr</a>
-      <a href="#Ujumine">Ujumine</a>
-      <a href="#Hobid-tulevikuks">Hobid tulevikuks</a>
-      <a href="#Kokkuvõte">Kokkuvõte</a>
+      <a href="#sissejuhatus"><span class="display-2">Sissejuhatus</span></a>
+      <a href="#Minust"><span class="display-2">Minust</span></a>
+      <a href="#Digikunst-ja-joonistamine"><span class="display-2">Digikunst ja joonistamine</span></a>
+      <a href="#Elektrikitarr"><span class="display-2">Elektrikitarr</span></a>
+      <a href="#Ujumine"><span class="display-2">Ujumine</span></a>
+      <a href="#Hobid-tulevikuks"><span class="display-2">Hobid tulevikuks</span></a>
+      <a href="#Kokkuvõte"><span class="display-2">Kokkuvõte</span></a>
     </nav>
   </main>
 

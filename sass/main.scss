@@ -1,12 +1,15 @@
-.hero-wrapper {
-  position: relative;
-  overflow: hidden;
-
-  .hero-image {
-    width: 100%;
-    height: 200px;  // adjust to your desired height
-    object-fit: cover;
-    display: block;
-  }
+.hero-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center 70%; /* pushes image content down */
+  display: block;
 }
+
+.hero-wrapper {
+  position: relative !important;
+  height: 300px !important;
+  overflow: hidden !important;
+}
+
 
