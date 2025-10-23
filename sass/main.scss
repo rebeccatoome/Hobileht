@@ -1,3 +1,14 @@
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, 
+              black 0%,       /* black starts at top */
+              black 65%,      /* black stays until 75% of height */
+              rgb(121, 121, 121) 100%);    /* white starts at bottom */
+  min-height: 100vh;
+  color: rgb(255, 255, 255);
+}
+
+
 .hero-wrapper {
   position: relative !important;
   height: 400px !important;
@@ -18,7 +29,7 @@
   gap: 40px;
   align-items: center;
 
-  background-color: #6e1717;
+  background-color: #4b0909;
   padding: 25px 60px;
   border-radius: 0;
 
@@ -37,5 +48,7 @@
     white-space: nowrap;
   }
 }
+
+
 
 
