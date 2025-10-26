@@ -35,7 +35,7 @@ body {
   margin-left: -50vw;
 }
 .navigatsioon a {
-  color: white;
+  color: rgba(255, 255, 255, 0.925);
   font-family: "Oswald", sans-serif;
   font-size: 60px;
   font-weight: bold;
