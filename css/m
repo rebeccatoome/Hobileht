@@ -124,29 +124,32 @@ body {
   font-weight: bold;
 }
 
+.navigatsioon a {
+  display: inline-block; /* so margin works as expected */
+  margin-right: 0px; /* horizontal spacing between links */
+  padding: 5px 0; /* optional vertical padding */
+}
+
 .nav_stiil {
   display: flex;
   gap: 10px;
+  font-size: 20px;
   justify-content: flex-start;
-  align-items: flex-start; /* prevents stretching */
+  align-items: center;
 }
 
 .nav_stiil a {
-  display: inline-block;
   text-decoration: none;
-  color: rgb(44, 17, 17); /* keep your current text color */
-  padding: 5px 8px;
+  color: black;
+  padding: 5px 10px;
   border-radius: 50px;
-  white-space: nowrap;
-  transition: background-color 0.3s ease;
-  flex: 0 0 auto; /* prevents flex items from stretching */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: auto; /* ensures it only wraps the text */
 }
 
-.nav_stiil a:hover,
-.nav_stiil a:focus,
-.nav_stiil a:active {
-  background-color: #E9BB76; /* yellow rectangle */
-  /* text color stays the same */
+.nav_stiil a:hover {
+  background-color: #310000;
+  color: rgb(44, 17, 17);
 }
 
 .yellow-text {
@@ -178,4 +181,4 @@ body {
   padding: 10px 0; /* optional vertical padding */
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=m.map */

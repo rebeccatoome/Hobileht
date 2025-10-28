@@ -132,6 +132,46 @@ body {
   }
 }
 
+.nav_stiil {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: flex-start; /* prevents stretching */
+}
+
+.nav_stiil a {
+  display: inline-block;  
+  text-decoration: none;
+  color: rgb(44, 17, 17); /* keep your current text color */
+  padding: 5px 8px;       
+  border-radius: 50px;    
+  white-space: nowrap;     
+  transition: background-color 0.3s ease;
+  flex: 0 0 auto;           /* prevents flex items from stretching */
+}
+
+.nav_stiil a:hover,
+.nav_stiil a:focus,
+.nav_stiil a:active {
+  background-color: #E9BB76; /* yellow rectangle */
+  /* text color stays the same */
+}
+
+
+.yellow-text {
+  list-style-type: disc;
+  margin-left: 20px;      /* indentation */
+  padding-left: 0;        /* remove default padding */
+  color: #E9BB76;         /* yellow color */
+  font-style: italic;     
+  line-height: 1.2;       /* tighter line spacing */
+}
+
+.yellow-text li {
+  margin-bottom: 5px;     /* smaller space between items */
+}
+
+
 .wrap-text {
   max-width: 1600px;
   margin: 0;
