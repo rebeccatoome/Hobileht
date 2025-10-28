@@ -1,10 +1,12 @@
+
 body {
   margin: 0;
   background: linear-gradient(to bottom, 
               black 0%,       /* black starts at top */
               black 65%,      /* black stays until 75% of height */
               rgb(121, 121, 121) 100%);    /* white starts at bottom */
-  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* gradient covers scrolling area */
   color: rgb(255, 255, 255);
 }
 
@@ -40,7 +42,7 @@ body {
   margin-left: -50vw;              // pull left edge to viewport left edge
 
   a {
-    color: rgba(255, 255, 255, 0.925);
+    color: rgba(224, 224, 224, 0.925);
     font-family: 'Oswald', sans-serif;
     font-size: 60px;
     font-weight: bold;
@@ -77,12 +79,14 @@ body {
 }
 
 #sissejuhatus {
-  font-size: 50px;
+  font-size: 55px;
   margin: 0;
   margin-right: auto;    /* no centering */
   text-align: left;
   padding: 0 20px;  /* small side padding on mobile */
-  padding-left: 200px;    /* small spacing from screen edge */
+  padding-left: 50px;    /* small spacing from screen edge */
+  position: relative;
+  top: 200px; /* moves the element down visually */
 
    p {
     line-height: 1.2;  /* Apply line height directly to paragraphs */
