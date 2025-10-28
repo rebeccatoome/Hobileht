@@ -10,6 +10,40 @@ body {
   color: rgb(255, 255, 255);
 }
 
+.movable-image-1 {
+  position: absolute;       /* stays in viewport */
+  top: 950px;
+  right: 600px;
+  width: 1200px;
+  height: 1200px;
+  z-index: 9999;   /* absolutely on top */
+  pointer-events: none;  /* click-through */
+}
+.movable-image-2 {
+  position: absolute;       /* stays in viewport */
+  top: 1000px;               /* move down */
+  right: 300px;              /* move to the right */
+  width: 1000px;
+  height: 1000px;
+  z-index: 9999;   /* absolutely on top */
+  pointer-events: none;  /* click-through */
+}
+
+.round-wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.hero-floating-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
 
 .hero-wrapper {
   position: relative !important;
@@ -113,6 +147,7 @@ body {
   margin-right: 100px;      /* adds space from the right edge */
   padding: 10px 0;         /* optional vertical padding */
 }
+
 
 
 
