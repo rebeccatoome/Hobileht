@@ -106,6 +106,53 @@ body {
   transform: scale(1.1); /* subtle hover zoom */
 }
 
+.icon-wrapper {
+  position: relative; /* popup will position relative to this container */
+  display: inline-block; /* keeps icon inline with others */
+}
+
+.profile-popup {
+  position: absolute;
+  top: 110%; /* slightly below the icon */
+  left: 50%; /* center horizontally */
+  transform: translateX(-50%); /* center based on the icon */
+  width: 220px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+}
+
+.profile-popup img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.profile-popup p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.profile-popup.show {
+  opacity: 1;
+  pointer-events: auto;
+  display: block;
+}
+
+#profile-icon {
+  position: relative;
+  display: inline-block;
+}
+
 #sissejuhatus {
   font-size: 55px;
   margin: 0;
@@ -124,29 +171,31 @@ body {
   font-weight: bold;
 }
 
-.nav_stiil {
-  display: flex;
-  gap: 10px;
-  justify-content: flex-start;
-  align-items: flex-start; /* prevents stretching */
-}
-
-.nav_stiil a {
+/* Base nav link style */
+.nav_stiil a span {
   display: inline-block;
   text-decoration: none;
-  color: rgb(44, 17, 17); /* keep your current text color */
-  padding: 5px 8px;
+  color: white; /* starting color */
+  padding: 5px 15px;
   border-radius: 50px;
   white-space: nowrap;
-  transition: background-color 0.3s ease;
-  flex: 0 0 auto; /* prevents flex items from stretching */
+  transition: background-color 0.3s ease, color 0.3s ease; /* smooth transition */
+  flex: 0 0 auto;
 }
 
-.nav_stiil a:hover,
-.nav_stiil a:focus,
-.nav_stiil a:active {
-  background-color: #E9BB76; /* yellow rectangle */
-  /* text color stays the same */
+.nav_stiil a span {
+  color: white; /* starting color */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover / focus / active state */
+.nav_stiil a:hover span,
+.nav_stiil a:focus span,
+.nav_stiil a:active span {
+  background-color: #E8C999; /* yellow background */
+  color: rgb(44, 17, 17); /* dark text */
+  border-radius: 50px; /* ensures rectangle stays rounded */
+  font-weight: bold;
 }
 
 .yellow-text {
@@ -163,7 +212,7 @@ body {
 }
 
 .wrap-text {
-  max-width: 1600px;
+  max-width: 1700px;
   margin: 0;
   margin-right: auto; /* no centering */
   text-align: left;
