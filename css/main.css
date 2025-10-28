@@ -111,14 +111,29 @@ body {
   display: inline-block; /* keeps icon inline with others */
 }
 
+/* Overlay that darkens the background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10000; /* less than the popup */
+}
+
 .profile-popup {
-  position: absolute;
-  top: 110%; /* slightly below the icon */
-  left: 50%; /* center horizontally */
-  transform: translateX(-50%); /* center based on the icon */
-  width: 220px;
-  background-color: #fff;
-  color: #000;
+  position: fixed;
+  top: 20%;
+  left: 10%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 1200px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   padding: 15px;
@@ -126,7 +141,7 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  z-index: 100;
+  z-index: 10001;
 }
 
 .profile-popup img {
