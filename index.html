@@ -25,7 +25,7 @@
       font-size: 150px;
       font-weight: bold;
       display: block;
-      /* Make span behave like block so text-align works */
+      /* Make span behave like block so text-align works , sass sass/main.scss css/main.css */
       text-align: center;
       color: rgb(212, 212, 212);
     }
@@ -92,11 +92,42 @@
       text-align: center;
       color: rgb(212, 212, 212);
     }
+
+    .display-6 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 90px;
+      font-weight: bold;
+      margin-right: 60px;
+      margin-left: 600px;
+      /* space between titles */
+      display: inline-block;
+      text-align: left;
+      /* align children to the left */
+      color: rgb(212, 212, 212);
+
+      display: inline-block;
+      /* make the background fit the text */
+      background-color: #E8C999;
+      /* rectangle color */
+      color: #310000;
+      /* text color for contrast */
+      padding: 10px 40px;
+      /* space inside the rectangle */
+      border-radius: 80px;
+      /* optional: rounded corners */
+    }
+
+    .display-6-text {
+  display: inline-block;
+  transform: translateY(-10px);
+  position: relative;
+  top: -1px;
+}
   </style>
 </head>
 
 <body>
-
+<section class="black-gradient">
   <div class="movable-image-2">
     <div class="round-wrapper">
       <picture>
@@ -216,6 +247,48 @@
         </ul>
       </div>
     </section>
+  </section>
+
+<section class="light-yellow">
+    <section id="Minust">
+      <h2 class="highlight">
+      <span class="display-6">
+      <span class="display-6-text"><b>Minust</b></span>
+      </span>
+      </h2>
+      <div class="wrap-text">
+        <div style="height: 20px;"></div>
+        <p>
+          Iga inimene on ainulaadne – meie taust, isiksus ja huvid kujundavad seda, kes me oleme.
+          Just seetõttu on ka igaühe hobid erinevad ja eristuvad. Olen loonud selle veebilehe kui
+          visuaalse ja isikupärase viisi oma hobide tutvustamiseks nii sõpradele, kolleegidele kui
+          ka kõigile huvilistele, kellega soovin seda jagada.
+        </p>
+        <div style="height: 40px;"></div>
+        <p>
+          Selle lehe loomine hõlmas planeerimist, prototüübi väljatöötamist ning veebiarendust, mille
+          tulemusena sündis kasutajasõbralik, hästi navigeeritav ning visuaalselt väljendusrikas hobileht.
+        </p>
+        <p><strong><span style="color: #E9BB76;">Lehelt leiad:</span></strong></p>
+        <ul class="yellow-text" style="list-style-type: disc; margin-left: 20px;">
+          <span style="color: #E9BB76; font-style: italic;">
+            <li>Tutvustuse minust kui autorist</li>
+          </span>
+          <span style="color: #E9BB76; font-style: italic;">
+            <li>Ülevaate minu praegustest hobidest</li>
+          </span>
+          <span style="color: #E9BB76; font-style: italic;">
+            <li>Pilguheidu hobidele, mida soovin tulevikus avastada</li>
+          </span>
+          <span style="color: #E9BB76; font-style: italic;">
+            <li>Parema arusaama minu isiklikust kujundusstiilist</li>
+          </span>
+        </ul>
+      </div>
+    </section>
+  </section>
+
+
 
 
 

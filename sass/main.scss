@@ -1,14 +1,36 @@
-
-body {
+/* Reset */
+body, html {
   margin: 0;
-  background: linear-gradient(to bottom, 
-              black 0%,       /* black starts at top */
-              black 65%,      /* black stays until 75% of height */
-              rgb(121, 121, 121) 100%);    /* white starts at bottom */
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* gradient covers scrolling area */
-  color: rgb(255, 255, 255);
+  padding: 0;
 }
+
+
+.black-gradient {
+  height: 2300px;
+  background: linear-gradient(to bottom, black 0%, rgb(158, 158, 158) 180%);
+  color: white;
+  display: block; /* remove flex centering */
+  width: 100%;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  position: relative;
+  top: -60px; /* move everything up */
+}
+
+
+/* Yellow section */
+.light-yellow {
+  height: 2000px; /* adjust height */
+  background-color: #FFF9C4; /* soft yellow */
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
 
 .movable-image-1 {
   position: absolute;       /* stays in viewport */
@@ -45,20 +67,25 @@ body {
 }
 
 
+/* Make the header/hero full width and height */
 .hero-wrapper {
-  position: relative !important;
-  height: 400px !important;
-  overflow: hidden !important;
-  width: 100%;
+  position: relative;
+  width: 100vw;        /* full viewport width */
+  height: 400px;       /* adjust height as needed */
+  overflow: hidden;
+  left: -50px; /* shift container 50px to the left */
 }
 
+/* Make the image cover the hero */
 .hero-image {
-  width: 100%;
-  height: 100%;          /* fill parent */
-  object-fit: cover;
-  object-position: center 70%;
+  width: 130%;
+  height: 100%;
+  object-fit: cover;   /* keeps aspect ratio while filling area */
   display: block;
+  object-position: center 50%; /* 50% is vertical center, increase to move down */
+  left: -100px;
 }
+
 
 .navigatsioon {
   display: flex;
@@ -199,6 +226,15 @@ body {
     font-weight: bold;
   }
 }
+
+#Minust {
+  background-color: #FFF9C4; /* soft light yellow */
+  color: #000;               /* dark text for contrast */
+  padding: 80px 20px;        /* space around content */
+  width: 100%;               /* full width */
+  margin-top: -50px; /* optional: negative if you want it closer to previous section */
+}
+
 
 /* Base nav link style */
 .nav_stiil a span{
