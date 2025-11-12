@@ -1,8 +1,9 @@
-@charset "UTF-8";
 /* Reset */
 body, html {
   margin: 0;
   padding: 0;
+  font-family: "UNAL Ancizar Serif", serif;
+  font-size: 30px;
 }
 
 .black-gradient {
@@ -94,9 +95,6 @@ body, html {
   padding: 25px 60px;
   border-radius: 0;
   width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
   margin-left: -50vw;
 }
 .navigatsioon a {
@@ -109,14 +107,11 @@ body, html {
 }
 
 .icon-row {
-  position: absolute;
-  top: 670px; /* move up or down — smaller number = higher */
-  right: 40px; /* distance from right edge */
   display: flex;
   gap: 60px; /* space between icons */
   background: transparent;
   padding: 10px;
-  z-index: 10; /* ensure it stays above background elements */
+  overflow-x: hidden; /* hide horizontal overflow */
 }
 
 .icon {
@@ -277,6 +272,75 @@ body, html {
   text-align: left; /* aligns text to the left */
   margin-right: 100px; /* adds space from the right edge */
   padding: 10px 0; /* optional vertical padding */
+}
+
+.display-1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 150px;
+  font-weight: bold;
+  display: block;
+  /* Make span behave like block so text-align works , sass sass/main.scss css/main.css */
+  text-align: center;
+  color: rgb(212, 212, 212);
+}
+
+.display-2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 55px;
+  margin-right: 60px;
+  /* space between titles */
+  display: inline-block;
+  text-align: left;
+  /* align children to the left */
+  color: rgb(212, 212, 212);
+}
+
+.display-3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 90px;
+  font-weight: bold;
+  margin-right: 60px;
+  margin-left: 600px;
+  /* space between titles */
+  display: inline-block;
+  text-align: left;
+  /* align children to the left */
+  background-color: #E8C999;
+  /* rectangle color */
+  color: #310000;
+  /* text color for contrast */
+  padding: 10px 40px;
+  /* space inside the rectangle */
+  border-radius: 80px;
+  /* optional: rounded corners */
+}
+
+.display-3-text {
+  display: inline-block;
+  /* transform: translateY(-10px);
+  position: relative;
+  top: -1px; */
+}
+
+.display-4 {
+  font-family: "Oswald", sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  font-style: italic;
+  display: block;
+  /* Make span behave like block so text-align works */
+  text-align: center;
+  color: rgb(212, 212, 212);
+}
+
+.display-5 {
+  font-family: "Oswald", sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  display: block;
+  /* Make span behave like block so text-align works */
+  text-align: center;
+  color: rgb(212, 212, 212);
 }
 
 /*# sourceMappingURL=main.css.map */
