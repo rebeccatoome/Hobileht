@@ -8,7 +8,7 @@ body, html {
 
 
 .black-gradient {
-  height: 2300px;
+  height: 2400px;
   background: linear-gradient(to bottom, black 0%, rgb(158, 158, 158) 180%);
   color: white;
   display: block; /* remove flex centering */
@@ -22,7 +22,7 @@ body, html {
 
 /* Yellow section */
 .light-yellow {
-  height: 2300px; /* adjust height */
+  height: 2400px; /* adjust height */
   background-color: #FFF9C4; /* soft yellow */
   color: black;
   display: flex;
@@ -32,10 +32,8 @@ body, html {
   padding: 60px 20px;
   box-sizing: border-box;
   position: relative;
-  top: -60px; /* move everything up */
+  top: -1300px; /* move everything up */
 }
-
-
 
 
 
@@ -95,46 +93,29 @@ body, html {
 
 
 .navigatsioon {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-
+  position: absolute;       
+  top: 0;                /* top edge */
+  left: 0;               /* left edge */
+  width: 100%;           /* full width */
+  top: 650px;         /* moves navbar down 100px from top */
+  height: 150px;          /* adjust navbar height */
+  display: flex;         /* flex for layout inside */
+  align-items: center;   /* vertically center items */
+  justify-content: space-between; /* space out links horizontally */
   background-color: #4b0909;
-  padding: 25px 60px;
-  border-radius: 0;
+  padding: 0 60px;       /* horizontal padding */
+  box-sizing: border-box;
+  z-index: 1000;         /* on top of other elements */
+}
 
-  width: 100vw;                     // full viewport width                    
-  margin-left: -50vw;              // pull left edge to viewport left edge
 
-  a {
-    color: rgba(224, 224, 224, 0.925);
-    font-family: 'Oswald', sans-serif;
-    font-size: 60px;
-    font-weight: bold;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  // @media (max-width: 768px) {
-  // /* Make navbar vertical */
-  // #navbar {
-  //   display: flex;
-  //   flex-direction: column; /* stack vertically */
-  //   align-items: center;
-  //   justify-content: center;
-  //   background-color: #4b0909; /* same as your maroon bar */
-  //   padding: 1rem 0;
-  //   width: 100%;
-  // }
-
-  // /* Nav links spacing + sizing */
-  // #navbar a {
-  //   display: block;
-  //   font-size: 1.3rem; /* adjust size for mobile */
-  //   color: #fff;
-  //   text-decoration: none;
-  //   margin: 0.3rem 0; /* spacing between links */
-  //   text-align: center;
-  // }
+.navigatsioon a {
+  color: rgba(224, 224, 224, 0.925);
+  font-family: 'Oswald', sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 
@@ -169,63 +150,6 @@ body, html {
   display: inline-block; /* keeps icon inline with others */
 }
 
-/* Overlay that darkens the background */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 10000;     /* less than the popup */
-}
-
-.profile-popup {
-  position: fixed;
-  top: 20%;
-  left: 10%;
-  transform: translateX(-50%);
-  width: 1200px;
-  height: 1200px;
-  background-color: rgba(0,0,0,0.9);
-  color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  padding: 15px;
-  text-align: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 10001;
-}
-
-.profile-popup img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-  object-fit: cover;
-}
-
-.profile-popup p {
-  margin: 5px 0;
-  font-size: 16px;
-}
-
-.profile-popup.show {
-  opacity: 1;
-  pointer-events: auto;
-  display: block;
-}
-
-#profile-icon {
-  position: relative;
-  display: inline-block;
-}
-
 
 
 
@@ -237,10 +161,11 @@ body, html {
   padding: 0 20px;  /* small side padding on mobile */
   padding-left: 50px;    /* small spacing from screen edge */
   position: relative;
-  top: 200px; /* moves the element down visually */
+  top: -1450px; /* moves the element down visually */
 
    p {
     line-height: 1.2;  /* Apply line height directly to paragraphs */
+    color: rgb(224, 224, 224);
   }
 
   h2 {
@@ -250,11 +175,14 @@ body, html {
 }
 
 #Minust {
+  max-width: 1100px;
   background-color: #FFF9C4; /* soft light yellow */
   color: #000;               /* dark text for contrast */
   padding: 80px 20px;        /* space around content */
   width: 100%;               /* full width */
   margin-top: -50px; /* optional: negative if you want it closer to previous section */
+  margin-left: 2000px;   /* pushes it to the right */
+ text-align: center;
 }
 
 
@@ -357,6 +285,7 @@ body, html {
       /* space inside the rectangle */
       border-radius: 80px;
       /* optional: rounded corners */
+      margin-left: 400px;
     }
 
     .display-3-text {
