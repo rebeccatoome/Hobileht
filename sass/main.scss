@@ -9,7 +9,7 @@ body, html {
 
 .black-gradient {
   height: 2400px;
-  background: linear-gradient(to bottom, black 0%, rgb(158, 158, 158) 180%);
+  background: linear-gradient(to bottom, black 0%, rgb(192, 192, 192) 240%);
   color: white;
   display: block; /* remove flex centering */
   width: 100%;
@@ -23,7 +23,7 @@ body, html {
 /* Yellow section */
 .light-yellow {
   height: 2400px; /* adjust height */
-  background-color: #FFF9C4; /* soft yellow */
+  background: linear-gradient(to bottom, #F8EEDF 0%, #706c65 240%);
   color: black;
   display: flex;
   justify-content: center;
@@ -55,6 +55,43 @@ body, html {
   z-index: 9999;   /* absolutely on top */
   pointer-events: none;  /* click-through */
 }
+
+
+ .movable-image-3 .round-wrapper {
+  position: absolute;       
+  top: 2425px;               
+  right: 1700px;              
+  width: 2200px;      /* make the image bigger */
+  height: 2200px;     /* make the image bigger */
+  z-index: 9999;   
+  pointer-events: none;
+  border-radius: 10px !important; /* force it to override the 50% */
+  overflow: hidden;    /* ensures corners are clipped */
+}
+
+.movable-image-5 {
+  position: absolute;       /* stays in viewport */
+  top: 3700px;               /* move down */
+  right: 800px;              /* move to the right */
+  width: 1000px;
+  height: 1000px;
+  z-index: 9999;   /* absolutely on top */
+  pointer-events: none;  /* click-through */
+  pointer-events: none;  /* click-through */
+}
+.movable-image-4 {
+  position: absolute;       /* stays in viewport */
+  top: 3700px;               /* move down */
+  right: 200px;              /* move to the right */
+  width: 1000px;
+  height: 1000px;
+  z-index: 9999;   /* absolutely on top */
+  pointer-events: none;  /* click-through */
+  transform: scaleX(-1);
+}
+
+
+
 
 .round-wrapper {
   width: 100%;
@@ -175,14 +212,18 @@ body, html {
 }
 
 #Minust {
-  max-width: 1100px;
-  background-color: #FFF9C4; /* soft light yellow */
-  color: #000;               /* dark text for contrast */
+  max-width: 2000px;
+  color: rgb(44, 17, 17);               /* dark text for contrast */
   padding: 80px 20px;        /* space around content */
   width: 100%;               /* full width */
   margin-top: -50px; /* optional: negative if you want it closer to previous section */
-  margin-left: 2000px;   /* pushes it to the right */
+  margin-left: 1900px;   /* pushes it to the right */
  text-align: center;
+ margin-top: -800px;
+ p {
+    line-height: 1.2;  /* Apply line height directly to paragraphs */
+    font-size: 55px;
+  }
 }
 
 
@@ -237,9 +278,15 @@ body, html {
   padding-left: 200px;    /* small spacing from screen edge */
 }
 
-.highlight {
+.highlight-1 {
   text-align: left;       /* aligns text to the left */
-  margin-right: 100px;      /* adds space from the right edge */
+  margin-left: 200px;
+  padding: 10px 0;         /* optional vertical padding */
+}
+
+.highlight-2 {
+  text-align: left;       /* aligns text to the left */
+  margin-left: 300px;
   padding: 10px 0;         /* optional vertical padding */
 }
 
@@ -289,6 +336,34 @@ body, html {
     }
 
     .display-3-text {
+  display: inline-block;
+  /* transform: translateY(-10px);
+  position: relative;
+  top: -1px; */
+}
+
+.display-0 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 90px;
+      font-weight: bold;
+      margin-right: 60px;
+      margin-left: 600px;
+      /* space between titles */
+      display: inline-block;
+      text-align: left;
+      /* align children to the left */
+      background-color: #E8C999;
+      /* rectangle color */
+      color: #310000;
+      /* text color for contrast */
+      padding: 10px 40px;
+      /* space inside the rectangle */
+      border-radius: 80px;
+      /* optional: rounded corners */
+      margin-left: 400px;
+    }
+
+    .display-0-text {
   display: inline-block;
   /* transform: translateY(-10px);
   position: relative;
