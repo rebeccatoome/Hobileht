@@ -4,54 +4,69 @@ body, html {
   padding: 0;
   font-family: 'UNAL Ancizar Serif', serif;
   font-size: 30px;
+  overflow-x: hidden;  /* prevent horizontal scroll */
 }
 
 
 .black-gradient {
-  height: 2400px;
+  height: 80rem;
   background: linear-gradient(to bottom, black 0%, rgb(192, 192, 192) 240%);
   color: white;
   display: block; /* remove flex centering */
   width: 100%;
-  padding: 60px 20px;
+  padding: 2rem 0.666rem;
   box-sizing: border-box;
   position: relative;
-  top: -60px; /* move everything up */
+  top: -2rem; /* move everything up */
 }
 
 
 /* Yellow section */
 .light-yellow {
-  height: 2400px; /* adjust height */
+  height: 80rem; /* adjust height */
   background: linear-gradient(to bottom, #F8EEDF 0%, #706c65 240%);
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 60px 20px;
+  padding: 2rem 0.666rem;
   box-sizing: border-box;
   position: relative;
-  top: -1300px; /* move everything up */
+  top: -43.333rem; /* move everything up */
 }
+
+.black-gradient-2 {
+  height: 120rem;
+  background: linear-gradient(to bottom, black 0%, rgb(192, 192, 192) 240%);
+  color: white;
+  display: block; /* remove flex centering */
+  width: 100%;
+  padding: 2rem 0.666rem;
+  box-sizing: border-box;
+  position: relative;
+  top: -43.333rem; /* move everything up */
+}
+
+
 
 
 
 .movable-image-1 {
   position: absolute;       /* stays in viewport */
-  top: 950px;
-  right: 600px;
-  width: 1200px;
-  height: 1200px;
+  top: 31.666rem;
+  right: 20rem;
+  width: 40rem;
+  height: 40rem;
   z-index: 9999;   /* absolutely on top */
   pointer-events: none;  /* click-through */
 }
 .movable-image-2 {
   position: absolute;       /* stays in viewport */
-  top: 1000px;               /* move down */
-  right: 300px;              /* move to the right */
-  width: 1000px;
-  height: 1000px;
+  top: 33.333rem;               /* move down */
+  right: 10rem;              /* move to the right */
+  width: 33.333rem;
+  height: 33.333rem;
   z-index: 9999;   /* absolutely on top */
   pointer-events: none;  /* click-through */
 }
@@ -59,10 +74,10 @@ body, html {
 
  .movable-image-3 .round-wrapper {
   position: absolute;       
-  top: 2425px;               
-  right: 1700px;              
-  width: 2200px;      /* make the image bigger */
-  height: 2200px;     /* make the image bigger */
+  top: 80.833rem;               
+  right: 56.666rem;              
+  width: 73.333rem;      /* make the image bigger */
+  height: 73.333rem;     /* make the image bigger */
   z-index: 9999;   
   pointer-events: none;
   border-radius: 10px !important; /* force it to override the 50% */
@@ -71,20 +86,20 @@ body, html {
 
 .movable-image-5 {
   position: absolute;       /* stays in viewport */
-  top: 3700px;               /* move down */
-  right: 800px;              /* move to the right */
-  width: 1000px;
-  height: 1000px;
+  top: 123.333rem;               /* move down */
+  right: 26.666rem;              /* move to the right */
+  width: 33.333rem;
+  height: 33.333rem;
   z-index: 9999;   /* absolutely on top */
   pointer-events: none;  /* click-through */
   pointer-events: none;  /* click-through */
 }
 .movable-image-4 {
   position: absolute;       /* stays in viewport */
-  top: 3700px;               /* move down */
-  right: 200px;              /* move to the right */
-  width: 1000px;
-  height: 1000px;
+  top: 123.333rem;               /* move down */
+  right: 6.666rem;              /* move to the right */
+  width: 33.333rem;
+  height: 33.333rem;
   z-index: 9999;   /* absolutely on top */
   pointer-events: none;  /* click-through */
   transform: scaleX(-1);
@@ -113,9 +128,9 @@ body, html {
 .hero-wrapper {
   position: relative;
   width: 100vw;        /* full viewport width */
-  height: 400px;       /* adjust height as needed */
+  height: 13.333rem;       /* adjust height as needed */
   overflow: hidden;
-  left: -50px; /* shift container 50px to the left */
+  left: -1.666rem; /* shift container 50px to the left */
 }
 
 /* Make the image cover the hero */
@@ -125,7 +140,7 @@ body, html {
   object-fit: cover;   /* keeps aspect ratio while filling area */
   display: block;
   object-position: center 50%; /* 50% is vertical center, increase to move down */
-  left: -100px;
+  left: -3.333rem;
 }
 
 
@@ -134,13 +149,13 @@ body, html {
   top: 0;                /* top edge */
   left: 0;               /* left edge */
   width: 100%;           /* full width */
-  top: 650px;         /* moves navbar down 100px from top */
-  height: 150px;          /* adjust navbar height */
+  top: 21.666rem;         /* moves navbar down 100px from top */
+  height: 5rem;          /* adjust navbar height */
   display: flex;         /* flex for layout inside */
   align-items: center;   /* vertically center items */
   justify-content: space-between; /* space out links horizontally */
   background-color: #4b0909;
-  padding: 0 60px;       /* horizontal padding */
+  padding: 0 2rem;       /* horizontal padding */
   box-sizing: border-box;
   z-index: 1000;         /* on top of other elements */
 }
@@ -149,7 +164,7 @@ body, html {
 .navigatsioon a {
   color: rgba(224, 224, 224, 0.925);
   font-family: 'Oswald', sans-serif;
-  font-size: 60px;
+  font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
   white-space: nowrap;
@@ -160,15 +175,15 @@ body, html {
 
 .icon-row {
   display: flex;
-  gap: 60px;           /* space between icons */
+  gap: 2rem;           /* space between icons */
   background: transparent;
-  padding: 10px;
+  padding: 0.333rem;
   overflow-x: hidden;  /* hide horizontal overflow */
 }
 
 .icon {
-  width: 80px;         /* bigger size */
-  height: 80px;
+  width: 2.666rem;         /* bigger size */
+  height: 2.666rem;
   color: black;
   cursor: pointer;
   transition: color 0.3s, transform 0.2s;
@@ -191,14 +206,14 @@ body, html {
 
 
 #sissejuhatus {
-  font-size: 55px;
+  font-size: 1.833rem;
   margin: 0;
   margin-right: auto;    /* no centering */
   text-align: left;
-  padding: 0 20px;  /* small side padding on mobile */
-  padding-left: 50px;    /* small spacing from screen edge */
+  padding: 0 0.666rem;  /* small side padding on mobile */
+  padding-left: 1.666rem;    /* small spacing from screen edge */
   position: relative;
-  top: -1450px; /* moves the element down visually */
+  top: -48.333rem; /* moves the element down visually */
 
    p {
     line-height: 1.2;  /* Apply line height directly to paragraphs */
@@ -206,25 +221,47 @@ body, html {
   }
 
   h2 {
-    font-size: 60px;
+    font-size: 2rem;
     font-weight: bold;
   }
 }
 
 #Minust {
-  max-width: 2000px;
+  max-width: 66.666rem;
   color: rgb(44, 17, 17);               /* dark text for contrast */
-  padding: 80px 20px;        /* space around content */
+  padding: 2.666rem 0.666rem;        /* space around content */
   width: 100%;               /* full width */
   margin-top: -50px; /* optional: negative if you want it closer to previous section */
-  margin-left: 1900px;   /* pushes it to the right */
+  margin-left: 63.333rem;   /* pushes it to the right */
  text-align: center;
- margin-top: -800px;
+ margin-top: -26.666rem;
  p {
     line-height: 1.2;  /* Apply line height directly to paragraphs */
-    font-size: 55px;
+    font-size: 1.833rem;
   }
 }
+
+#Digikunst-ja-joonistamine {
+  max-width: 55.666rem;
+  color: rgb(224, 224, 224);
+  padding: 2.666rem 0.666rem;
+  padding-left: 1.666rem;     /* MATCH sissejuhatus left alignment */
+  width: 100%;
+  margin-top: 11rem;          /* move down */
+  margin-right: auto;         /* pushes content to the LEFT */
+  text-align: left;
+
+  
+  /* Move whole section up */
+  position: relative;
+  top: -8rem;                  /* adjust as needed */
+}
+
+#Digikunst-ja-joonistamine p {
+  line-height: 1.4;
+  font-size: 1.833rem;
+}
+
 
 
 /* Base nav link style */
@@ -268,6 +305,11 @@ body, html {
   margin-bottom: 5px;     /* smaller space between items */
 }
 
+.yellow-text-2 {
+  padding-left: 0;        /* remove default padding */
+  color: #E9BB76;         /* yellow color */ 
+}
+
 .wrap-text {
   max-width: 1700px;
   margin: 0;
@@ -275,18 +317,18 @@ body, html {
   text-align: left;
   line-height: 1.6;
   padding: 0 20px;  /* small side padding on mobile */
-  padding-left: 200px;    /* small spacing from screen edge */
+  padding-left: 6.666rem;    /* small spacing from screen edge */
 }
 
 .highlight-1 {
   text-align: left;       /* aligns text to the left */
-  margin-left: 200px;
+  margin-left: 6.666rem;
   padding: 10px 0;         /* optional vertical padding */
 }
 
 .highlight-2 {
   text-align: left;       /* aligns text to the left */
-  margin-left: 300px;
+  margin-left: 10rem;
   padding: 10px 0;         /* optional vertical padding */
 }
 
@@ -295,7 +337,7 @@ body, html {
 
     .display-1 {
       font-family: 'Oswald', sans-serif;
-      font-size: 150px;
+      font-size: 5rem;
       font-weight: bold;
       display: block;
       /* Make span behave like block so text-align works , sass sass/main.scss css/main.css */
@@ -305,8 +347,8 @@ body, html {
 
     .display-2 {
       font-family: 'Oswald', sans-serif;
-      font-size: 55px;
-      margin-right: 60px;
+      font-size: 1.833rem;
+      margin-right: 2rem;
       /* space between titles */
       display: inline-block;
       text-align: left;
@@ -316,9 +358,9 @@ body, html {
 
     .display-3 {
       font-family: 'Oswald', sans-serif;
-      font-size: 90px;
+      font-size: 3rem;
       font-weight: bold;
-      margin-right: 60px;
+      margin-right: 2rem;
       margin-left: 600px;
       /* space between titles */
       display: inline-block;
@@ -328,11 +370,12 @@ body, html {
       /* rectangle color */
       color: #310000;
       /* text color for contrast */
-      padding: 10px 40px;
+      padding: 0.333rem 1.333rem;
       /* space inside the rectangle */
-      border-radius: 80px;
+      border-radius: 2.666rem;
       /* optional: rounded corners */
-      margin-left: 400px;
+      margin-left: 13.333rem;
+      transform: translateY(-2rem);
     }
 
     .display-3-text {
@@ -342,37 +385,9 @@ body, html {
   top: -1px; */
 }
 
-.display-0 {
+.display-4 {
       font-family: 'Oswald', sans-serif;
-      font-size: 90px;
-      font-weight: bold;
-      margin-right: 60px;
-      margin-left: 600px;
-      /* space between titles */
-      display: inline-block;
-      text-align: left;
-      /* align children to the left */
-      background-color: #E8C999;
-      /* rectangle color */
-      color: #310000;
-      /* text color for contrast */
-      padding: 10px 40px;
-      /* space inside the rectangle */
-      border-radius: 80px;
-      /* optional: rounded corners */
-      margin-left: 400px;
-    }
-
-    .display-0-text {
-  display: inline-block;
-  /* transform: translateY(-10px);
-  position: relative;
-  top: -1px; */
-}
-
-    .display-4 {
-      font-family: 'Oswald', sans-serif;
-      font-size: 80px;
+      font-size: 2.666rem;
       font-weight: bold;
       font-style: italic;
       display: block;
@@ -383,13 +398,72 @@ body, html {
 
     .display-5 {
       font-family: 'Oswald', sans-serif;
-      font-size: 50px;
+      font-size: 1.666rem;
       font-weight: bold;
       display: block;
       /* Make span behave like block so text-align works */
       text-align: center;
       color: rgb(212, 212, 212);
     }
+
+ .display-6 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      font-weight: bold;
+      margin-right: 2rem;
+      margin-left: 600px;
+      /* space between titles */
+      display: inline-block;
+      text-align: left;
+      /* align children to the left */
+      background-color: #E8C999;
+      /* rectangle color */
+      color: #310000;
+      /* text color for contrast */
+      padding: 0.333rem 1.333rem;
+      /* space inside the rectangle */
+      border-radius: 2.666rem;
+      /* optional: rounded corners */
+      margin-left: 5.333rem;
+      transform: translateY(-2rem);
+    }
+    .display-6-text {
+  display: inline-block;
+  /* transform: translateY(-10px);
+  position: relative;
+  top: -2rem; */
+}
+
+.display-0 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      font-weight: bold;
+      margin-right: 2rem;
+      margin-left: 600px;
+      /* space between titles */
+      display: inline-block;
+      text-align: left;
+      /* align children to the left */
+      background-color: #E8C999;
+      /* rectangle color */
+      color: #310000;
+      /* text color for contrast */
+      padding: 0.333rem 1.333rem;
+      /* space inside the rectangle */
+      border-radius: 2.666rem;
+      /* optional: rounded corners */
+      margin-left: 13.333rem;
+      transform: translateY(-2rem);
+    }
+
+    .display-0-text {
+  display: inline-block;
+  /* transform: translateY(-10px);
+  position: relative;
+  top: -1px; */
+}
+
+    
 
 
 
