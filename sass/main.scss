@@ -37,8 +37,8 @@ body, html {
 }
 
 .black-gradient-2 {
-  height: 120rem;
-  background: linear-gradient(to bottom, black 0%, rgb(192, 192, 192) 240%);
+  height: 143rem;
+  background: linear-gradient(to bottom, black 0%, rgb(192, 192, 192) 200%);
   color: white;
   display: block; /* remove flex centering */
   width: 100%;
@@ -104,7 +104,15 @@ body, html {
   pointer-events: none;  /* click-through */
   transform: scaleX(-1);
 }
-
+.movable-image-6 {
+  position: absolute;       /* stays in viewport */
+  top: 195.333rem;               /* move down */
+  right: 65.666rem;              /* move to the right */
+  width: 60.333rem;
+  height: 60.333rem;
+  z-index: 9999;   /* absolutely on top */
+  pointer-events: none;  /* click-through */
+}
 
 
 
@@ -463,7 +471,83 @@ body, html {
   top: -1px; */
 }
 
-    
+.rectangle-text {
+  background: linear-gradient(180deg, #000000, #4c0000);
+  padding: 2rem 3rem;
+  width: 100%;           // allow it to stretch
+  max-width: 90rem;      // controls how long the text lines are
+  margin-left: -2rem;        // align left
+  margin-right: 0;       // prevent centering
+  border-radius: 2rem;
+  text-align: center;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.rectangle-text-2 {
+  background: linear-gradient(180deg, #000000, #000000);
+  padding: 1rem 3rem;
+  width: 12rem;           // allow it to stretch
+  max-width: 12rem;      // controls how long the text lines are
+  margin-left: 22rem;        // align left
+  margin-right: 0;       // prevent centering
+  border-radius: 2rem;
+  text-align: center;
+  color: #ffffff;
+  line-height: 1.6;
+  font-family: 'Oswald', sans-serif;  /* make sure font is loaded */
+  font-size: 2rem;                     /* bigger text */
+
+  cursor: pointer;           /* show pointer on hover */
+    transition: transform 0.2s, background 0.2s; /* smooth animation */
+    display: inline-block;     /* make it shrink-wrap text */
+}
+
+ .rectangle-text-2:hover {
+      transform: scale(1.2); /* grow bigger on hover */
+      background: linear-gradient(180deg, #000000, #000000); /* subtle darken */
+    }
+
+ /* Modal sizing */
+  .modal-dialog {
+    max-width: 60vw;          /* slightly wider than before */
+    height: 60vh;             /* fixed height */
+    margin: auto;             /* center vertically & horizontally */
+  }
+
+  .modal-content {
+    background-color: black;
+    height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Carousel fills modal content */
+  .carousel-inner, .carousel-item, .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* cover box without stretching */
+  }
+
+  /* Position arrows at center vertically */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%;  /* smaller arrow box width */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-size: 100%, 100%;
+  }
+
+
+
+
 
 
 
