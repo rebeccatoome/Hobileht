@@ -508,42 +508,57 @@ body, html {
       background: linear-gradient(180deg, #000000, #000000); /* subtle darken */
     }
 
+.modal {
+  position: sticky !important;   /* always fixed relative to viewport */
+  width: 95vw;      /* Width: 80% of the viewport width */
+  max-width: 95vw;  /* Max width to prevent overflow */
+  height: 130vh;     /* Height: 70% of the viewport height */
+  max-height: 130vh; /* Max height */
+}
+
  /* Modal sizing */
-  .modal-dialog {
-    max-width: 60vw;          /* slightly wider than before */
-    height: 60vh;             /* fixed height */
-    margin: auto;             /* center vertically & horizontally */
-  }
+.modal-dialog {
+  width: 90vw;
+  max-width: 90vw;         /* ensure width doesn't exceed */
+  height: 70vh;            /* desired popup height */
+  max-height: 90vh;        /* prevent it from going off-screen */
+  margin: auto;
+}
 
-  .modal-content {
-    background-color: black;
-    height: 100%;
-    border-radius: 1rem;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.modal-content {
+  height: 100%;            /* fill modal-dialog height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;        /* prevent scroll overflow inside */
+  border-radius: 1rem;
+  background-color: black;
+}
 
-  /* Carousel fills modal content */
-  .carousel-inner, .carousel-item, .carousel-item img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover; /* cover box without stretching */
-  }
+.carousel-inner,
+.carousel-item {
+  width: 50rem !important;
+  height: 50rem !important;
+}
 
-  /* Position arrows at center vertically */
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 5%;  /* smaller arrow box width */
-    top: 50%;
-    transform: translateY(-50%);
-  }
+.carousel-item img {
+  width: 50rem !important;
+  height: 50rem !important;
+  object-fit: cover;
+  display: block;
+  transition: none !important;
+}
 
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-size: 100%, 100%;
-  }
+
+/* Arrow positioning */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
 
 
 
