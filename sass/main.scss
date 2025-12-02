@@ -64,6 +64,32 @@ body, html {
   top: -43.333rem; /* move everything up */
 }
 
+.light-yellow-2 {
+  height: 150rem; /* adjust height */
+  background: linear-gradient(to bottom, #F8EEDF 0%, #706c65 240%);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0.666rem;
+  box-sizing: border-box;
+  position: relative;
+  top: -43.333rem; /* move everything up */
+}
+
+.black-gradient-3 {
+  height: 100rem;
+  background: linear-gradient(to bottom, black 0%, rgb(192, 192, 192) 200%);
+  color: white;
+  display: block; /* remove flex centering */
+  width: 100%;
+  padding: 2rem 0.666rem;
+  box-sizing: border-box;
+  position: relative;
+  top: -43.333rem; /* move everything up */
+}
+
 
 
 
@@ -172,10 +198,10 @@ body, html {
   position: absolute;
   z-index: 9999;   /* absolutely on top */
   pointer-events: none;  /* click-through */
-  top: 12rem;
+  top: 14rem;
   left: -55rem;
   overflow: hidden;
-  transform: scale(2.4) rotate(15deg);  /* rotates 15 degrees clockwise */
+  transform: scale(2.8) rotate(15deg);  /* rotates 15 degrees clockwise */
 }
 
 .movable-image-9 img {
@@ -189,7 +215,7 @@ body, html {
   position: absolute;
   z-index: 9999;   /* absolutely on top */
   pointer-events: none;  /* click-through */
-  top: 35rem;
+  top: 38rem;
   left: -25rem;
   overflow: hidden;
   transform: scale(2.4);
@@ -206,13 +232,31 @@ body, html {
   position: absolute;
   z-index: 9999;   /* absolutely on top */
   pointer-events: none;  /* click-through */
-  top: 20rem;
-  left: -35rem;
+  top: 18rem;
+  left: -37rem;
   overflow: hidden;
-  transform: scale(2.4) rotate(5deg); 
+  transform: rotate(-10deg) scale(2.8); 
 }
 
 .movable-image-11 img {
+  object-fit: cover;     /* scales/crops the image */
+  display: block;        /* removes default inline spacing */
+  image-rendering: auto;  /* default */
+  image-rendering: crisp-edges; /* for pixel art */
+}
+
+.movable-image-12 {
+  position: absolute;
+  z-index: 9999;   /* absolutely on top */
+  pointer-events: none;  /* click-through */
+  top: 67rem;
+  left: -50rem;
+  overflow: hidden;
+  transform: scale(1.2); 
+  border-radius: 3rem;
+}
+
+.movable-image-12 img {
   object-fit: cover;     /* scales/crops the image */
   display: block;        /* removes default inline spacing */
   image-rendering: auto;  /* default */
@@ -380,8 +424,9 @@ body, html {
   padding: 2.666rem 0.666rem;
   width: 100%;
   position: relative;
-  top: -10rem;
+  top: -45rem;
   margin-left: 60rem;
+  overflow: visible;    /* allow button to appear outside other content if needed */
 }
 #Elektrikitarr p {
   line-height: 1.4;
@@ -652,7 +697,7 @@ body, html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90vw;
+  width: 200vw;
   max-width: 95vw;
   max-height: 90vh;
   background: linear-gradient(to bottom, #000 0%, #434343 100%);
@@ -662,21 +707,35 @@ body, html {
   z-index: 20000;  
 }
 
+.modal-dialog {
+  max-width: 95vw; /* increase maximum width */
+  width: 90vw;     /* default width */
+  height: auto;     /* let height scale naturally */
+}
+
 /* Make body non-scrollable */
 .modal-content {
   overflow: hidden;
+  background: transparent !important;
+  box-shadow: none; /* remove any white-ish shadow if present */
 }
 
 /* Prevent internal scrollbars */
 .modal-body {
   display: flex;
-  gap: 2rem;
+  gap: 0;
+  width: 100%;     /* fill modal width */
+  max-height: 80vh; /* or a fixed height less than modal max-height */
+  height: auto;    /* allow height to be controlled by content or max-height */
+  padding: 0;
   overflow: hidden;
 }
 
-/* Image area */
 .modal-image {
-  flex: 0 0 50%;
+  flex: 0 0 60%;
+  height: auto;
+  border-radius: 2rem;  /* container rounding */
+  overflow: hidden;    
 }
 
 .carousel-inner,
@@ -684,14 +743,15 @@ body, html {
   width: 100%;
   max-height: 75vh;
   object-fit: cover;
-  border-radius: 1rem;
+  border-radius: 2rem;  /* make inner container match */
+  overflow: hidden;
 }
 
 /* Right-side text */
 .modal-title {
   font-family: 'Oswald', sans-serif;
   font-size: 2.5rem;
-  color: #ffe680;
+  color: #E8C999;
   margin-bottom: 1rem;
 }
 
@@ -742,6 +802,57 @@ body, html {
 .custom-indicators .active {
   background-color: #ffe680;
 }
+
+.modal-text {
+  flex: 1 1 50%;
+  height: 100%;
+  padding: 1rem; /* optional padding for text */
+  overflow-y: auto; /* scroll text if too long */
+  color: #ffe680; /* keep your text color */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* preserves aspect ratio, no cropping */
+  border-radius: 0.5rem;  /* slightly rounded corners */
+}
+
+.small-text {
+  font-family: 'Felipa';
+  font-style: italic;
+  font-size: 1.1rem;            /* size you can adjust */
+  color: #ffffff;               /* or any color */
+  margin: 0.25rem 0;
+}
+
+.info-button {
+  position: absolute;       /* position relative to #Elektrikitarr */
+  bottom: 2rem;             /* distance from bottom of section */
+  right: 2rem;              /* distance from right of section */
+  background: black;
+  color: white;
+  padding: 1rem 3rem;
+  margin-right: 17rem;
+  bottom: -5rem;
+  border-radius: 2rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+
+  z-index: 9999;            /* ensures it appears on top of images */
+  transition: transform 0.2s, background 0.2s;
+}
+
+.info-button:hover {
+  transform: scale(1.2);
+  background: #222;          /* subtle darken on hover */
+}
+
+
+
+
 
 
 
