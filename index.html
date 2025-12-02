@@ -12,6 +12,7 @@
   <!-- Your compiled custom Bootstrap + your theme -->
   <link rel="stylesheet" href="css/main.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Felipa&display=swap" rel="stylesheet">
   <!-- <link rel="stylesheet" href="css/mobile.css" media="(max-width: 768px)"> -->
 </head>
 
@@ -229,37 +230,97 @@
 <p class="rectangle-text-2" data-toggle="modal" data-target="#galleryModal">GALERII</p>
       </div>
 
+
+ <span class="body-1 yellow-text">NÄITED</span>
+ <span class="body-2 yellow-text">2025</span>
+
+ <div class="movable-image-7">
+      <picture>
+        <source srcset="img/kehaportree.png" type="image/png" />
+        <img src="img/kehaportree.png" alt="Kehaportree" class="hero-floating-image" />
+      </picture>
+  </div> 
+
+   <div class="movable-image-8">
+      <picture>
+        <source srcset="img/portree.png" type="image/png" />
+        <img src="img/portree.png" alt="Portree" class="hero-floating-image" />
+      </picture>
+  </div> 
+
 <!-- Modal with Carousel -->
 <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-body p-0">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="false">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="img/doctor.png" alt="Slide 1">
+
+      <!-- Close button -->
+      <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+        &times;
+      </button>
+
+      <!-- Modal body -->
+      <div class="modal-body d-flex p-0">
+
+        <!-- LEFT: Carousel -->
+        <div class="modal-image flex-shrink-0">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators custom-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active"
+                   data-title="Doctor Slide"
+                   data-text="This is the doctor slide description.">
+                <img src="img/doctor.png" alt="Doctor">
+              </div>
+
+              <div class="carousel-item"
+                   data-title="Toy Merchant Slide"
+                   data-text="This is the toy merchant slide description.">
+                <img src="img/toy-merchant.png" alt="Toy Merchant">
+              </div>
+
+              <div class="carousel-item"
+                   data-title="Entomologist Slide"
+                   data-text="This is the entomologist slide description.">
+                <img src="img/Entomologist.png" alt="Entomologist">
+              </div>
             </div>
-            <div class="carousel-item">
-              <img src="img/toy-merchant.png" alt="Slide 2">
-            </div>
-            <div class="carousel-item">
-              <img src="img/Entomologist.png" alt="Slide 3">
-            </div>
+
+            <!-- Carousel arrows -->
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="custom-prev">&#10094;</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="custom-next">&#10095;</span>
+            </a>
+
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
+
+        <!-- RIGHT: Title + Description -->
+        <div class="modal-text flex-grow-1">
+          <h2 class="modal-title">Doctor Slide</h2>
+          <p class="modal-description">This is the doctor slide description.</p>
+        </div>
+
+        <!-- RIGHT: Title + Description -->
+        <div class="modal-text flex-grow-1">
+          <h2 class="modal-title">Toy Merchant Slide</h2>
+          <p class="modal-description">This is the toy merchant slide description.</p>
+        </div>
+
+        <!-- RIGHT: Title + Description -->
+        <div class="modal-text flex-grow-1">
+          <h2 class="modal-title">Entomologist Slide</h2>
+          <p class="modal-description">This is the entomologist slide description.</p>
+        </div>
+
       </div>
     </div>
   </div>
@@ -297,33 +358,84 @@
     </div>
   </div> 
 
+  
+<section class="light-yellow">
+    <section id="Elektrikitarr">
+      <h2 class="highlight-2">
+      <span class="display-7">
+      <span class="display-7-text"><b>Elektrikitarr</b></span>
+      </span>
+      </h2>
+      <div class="wrap-text">
+        <div style="height: 20px;"></div>
+        <p>
+          Muusika instrumendi õppimine on asi, mida olen alati tahtnud teha. Olin algselt huvitatud drummimängust,
+          kuid leidsin, et kitarri mängimine sobib mulle rohkem. Läbi klassiõe sain kontakti õpetajaga, kes oli 
+          nõus mind abistama kitarri õppimisel. Ma alustasin akustilise kitarriga mängimist selle aasta kevadel.
+        </p>
+        <p>
+          Elektrikitarr on mulle eriti silma paistnud läbi aastate. Selle elektrooniline heli, häälestamisvõimalused
+          ja üldine meloodia tekitab meeldivat tunnet, seega otsustasin suvel endale oma elektrikitarri osta.
+        </p>
+        <p>
+          Olen tasapisi edenenud, õppinud lühikesi lauluviise ja mänginud neid korduvalt, et neid paremini meelde jätta.
+          Ma ei püüa kaugeltki saada professionaaliks, aga loodetavasti saan piisavalt heaks, et ennast päriselt kitarristiks nimetada.
+        </p>
+      </div>
+
+<div class="movable-image-9">
+    <div class="round-wrapper">
+      <picture>
+        <source srcset="img/kitarr.png" type="image/png" />
+        <img src="img/kitarr.png" alt="kitarr" class="hero-floating-image" />
+      </picture>
+    </div>
+  </div> 
+
+ <div class="movable-image-10">
+    <div class="round-wrapper">
+      <picture>
+        <source srcset="img/white-pomegranate.png" type="image/png" />
+        <img src="img/white-pomegranate.png" alt="valge pomegranate" class="hero-floating-image" />
+      </picture>
+    </div>
+  </div> 
+
+  <div class="movable-image-11">
+      <picture>
+        <source srcset="img/elektrikitarr.png" type="image/png" />
+        <img src="img/elektrikitarr.png" alt="elektrikitarr" class="hero-floating-image" />
+      </picture>
+  </div>
+
+    </section>
+  </section>
+
+      
+
+
+
 
 </main>
 <footer></footer>
 
 
+
+
     <!-- JAVASCRIPT -->
-    <script>
-      const profileIcon = document.getElementById('profile-icon');
-      const overlay = document.getElementById('overlay');
-      const profilePopup = document.getElementById('profile-popup');
 
-      profileIcon.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent document click from immediately closing popup
-        overlay.classList.add('active');
-        profilePopup.classList.toggle('show'); // toggle class
-      });
-      document.addEventListener('click', (e) => {
-        // Close popup if click is outside both the profile icon and the popup itself
-        if (!profileIcon.contains(e.target) && !profilePopup.contains(e.target)) {
-          profilePopup.classList.remove('active');
-          overlay.classList.remove('active');
-        }
-      });
-    </script>
+<script>
+const carousel = document.getElementById('carouselExampleIndicators');
+const titleEl = document.querySelector('.modal-title');
+const descEl = document.querySelector('.modal-description');
 
-    <!-- Bootstrap JS (optional if needed) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+$('#carouselExampleIndicators').on('slid.bs.carousel', function () {
+  const activeItem = carousel.querySelector('.carousel-item.active');
+  titleEl.textContent = activeItem.dataset.title;
+  descEl.textContent = activeItem.dataset.text;
+});
+</script>
+
  
 </body>
 </html>

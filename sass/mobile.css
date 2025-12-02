@@ -1,0 +1,79 @@
+@media (max-width: 768px) {
+  /* Make navbar vertical */
+  #navbar {
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    align-items: center;
+    justify-content: center;
+    background-color: #4b0909; /* same as your maroon bar */
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  /* Nav links spacing + sizing */
+  #navbar a {
+    display: block;
+    font-size: 1.3rem; /* adjust size for mobile */
+    color: #fff;
+    text-decoration: none;
+    margin: 0.3rem 0; /* spacing between links */
+    text-align: center;
+  }
+
+  /* Fix the display titles (text classes) */
+  .display-2 {
+    font-size: 1.4rem;  /* smaller titles for mobile */
+    margin-right: 0;    /* remove desktop spacing */
+    margin-left: 0;
+  }
+
+  /* Adjust icon row if needed */
+  .icon-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1rem 0;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#page-content,
+.site-header,
+.hero-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center 17.5%;
+}
+
+.movable-image-1,
+.movable-image-2 {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+

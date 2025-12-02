@@ -7,6 +7,22 @@ body, html {
   overflow-x: hidden;  /* prevent horizontal scroll */
 }
 
+ .body-1 {
+    font-family: "Felipa", cursive;
+    font-size: 4rem;
+    position: absolute;
+    right: -42rem;   /* move from right side */
+    top: -0.5rem;     /* move downward from top */
+        }
+
+        .body-2 {
+    font-family: "Felipa", cursive;
+    font-size: 3rem;
+    position: absolute;
+    right: -37rem;   /* move from right side */
+    top: 4rem;     /* move downward from top */
+        }
+
 
 .black-gradient {
   height: 80rem;
@@ -112,6 +128,95 @@ body, html {
   height: 60.333rem;
   z-index: 9999;   /* absolutely on top */
   pointer-events: none;  /* click-through */
+}
+
+.movable-image-7 {
+  position: absolute;
+  top: 27rem;
+  right: -47rem;
+  z-index: 9999;   /* absolutely on top */
+  pointer-events: none;  /* click-through */
+
+  border-radius: 2rem; /* Rounded corners */
+  overflow: hidden;
+  transform: scale(2.2);  /* make it 20% bigger */
+}
+
+.movable-image-7 img {
+  object-fit: cover;     /* scales/crops the image */
+  display: block;        /* removes default inline spacing */
+  image-rendering: auto;  /* default */
+  image-rendering: crisp-edges; /* for pixel art */
+}
+
+.movable-image-8 {
+  position: absolute;
+  top: 95rem;
+  right: -46rem;
+  z-index: 9999;   /* absolutely on top */
+  pointer-events: none;  /* click-through */
+
+  border-radius: 2rem; /* Rounded corners */
+  overflow: hidden;
+  transform: scale(2.4);  /* make it 20% bigger */
+}
+
+.movable-image-8 img {
+  object-fit: cover;     /* scales/crops the image */
+  display: block;        /* removes default inline spacing */
+  image-rendering: auto;  /* default */
+  image-rendering: crisp-edges; /* for pixel art */
+}
+
+.movable-image-9 {
+  position: absolute;
+  z-index: 9999;   /* absolutely on top */
+  pointer-events: none;  /* click-through */
+  top: 12rem;
+  left: -55rem;
+  overflow: hidden;
+  transform: scale(2.4) rotate(15deg);  /* rotates 15 degrees clockwise */
+}
+
+.movable-image-9 img {
+  object-fit: cover;     /* scales/crops the image */
+  display: block;        /* removes default inline spacing */
+  image-rendering: auto;  /* default */
+  image-rendering: crisp-edges; /* for pixel art */
+}
+
+.movable-image-10 {
+  position: absolute;
+  z-index: 9999;   /* absolutely on top */
+  pointer-events: none;  /* click-through */
+  top: 35rem;
+  left: -25rem;
+  overflow: hidden;
+  transform: scale(2.4);
+}
+
+.movable-image-10 img {
+  object-fit: cover;     /* scales/crops the image */
+  display: block;        /* removes default inline spacing */
+  image-rendering: auto;  /* default */
+  image-rendering: crisp-edges; /* for pixel art */
+}
+
+.movable-image-11 {
+  position: absolute;
+  z-index: 9999;   /* absolutely on top */
+  pointer-events: none;  /* click-through */
+  top: 20rem;
+  left: -35rem;
+  overflow: hidden;
+  transform: scale(2.4) rotate(5deg); 
+}
+
+.movable-image-11 img {
+  object-fit: cover;     /* scales/crops the image */
+  display: block;        /* removes default inline spacing */
+  image-rendering: auto;  /* default */
+  image-rendering: crisp-edges; /* for pixel art */
 }
 
 
@@ -270,6 +375,18 @@ body, html {
   font-size: 1.833rem;
 }
 
+#Elektrikitarr {
+  max-width: 55.666rem;
+  padding: 2.666rem 0.666rem;
+  width: 100%;
+  position: relative;
+  top: -10rem;
+  margin-left: 60rem;
+}
+#Elektrikitarr p {
+  line-height: 1.4;
+  font-size: 1.833rem;
+}
 
 
 /* Base nav link style */
@@ -471,6 +588,27 @@ body, html {
   top: -1px; */
 }
 
+.display-7 {
+  display: inline-block;   /* keep inline-block */
+  position: relative;      /* enables top/left positioning */
+  top: -2rem;              /* moves it up */
+  margin-left: 10rem;       /* optional horizontal spacing */
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: #E8C999;
+  color: #310000;
+  padding: 0.333rem 1.333rem;
+  border-radius: 2.666rem;
+}
+    .display-7-text {
+  display: inline-block;
+  /* transform: translateY(-10px);
+  position: relative;
+  top: -2rem; */
+}
+
+
 .rectangle-text {
   background: linear-gradient(180deg, #000000, #4c0000);
   padding: 2rem 3rem;
@@ -508,55 +646,107 @@ body, html {
       background: linear-gradient(180deg, #000000, #000000); /* subtle darken */
     }
 
+/* Modal container */
 .modal {
-  position: sticky !important;   /* always fixed relative to viewport */
-  width: 95vw;      /* Width: 80% of the viewport width */
-  max-width: 95vw;  /* Max width to prevent overflow */
-  height: 130vh;     /* Height: 70% of the viewport height */
-  max-height: 130vh; /* Max height */
-}
-
- /* Modal sizing */
-.modal-dialog {
+  position: fixed !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 90vw;
-  max-width: 90vw;         /* ensure width doesn't exceed */
-  height: 70vh;            /* desired popup height */
-  max-height: 90vh;        /* prevent it from going off-screen */
-  margin: auto;
+  max-width: 95vw;
+  max-height: 90vh;
+  background: linear-gradient(to bottom, #000 0%, #434343 100%);
+  border-radius: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+  z-index: 20000;  
 }
 
+/* Make body non-scrollable */
 .modal-content {
-  height: 100%;            /* fill modal-dialog height */
+  overflow: hidden;
+}
+
+/* Prevent internal scrollbars */
+.modal-body {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;        /* prevent scroll overflow inside */
-  border-radius: 1rem;
-  background-color: black;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+/* Image area */
+.modal-image {
+  flex: 0 0 50%;
 }
 
 .carousel-inner,
-.carousel-item {
-  width: 50rem !important;
-  height: 50rem !important;
-}
-
 .carousel-item img {
-  width: 50rem !important;
-  height: 50rem !important;
+  width: 100%;
+  max-height: 75vh;
   object-fit: cover;
-  display: block;
-  transition: none !important;
+  border-radius: 1rem;
 }
 
+/* Right-side text */
+.modal-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  color: #ffe680;
+  margin-bottom: 1rem;
+}
 
-/* Arrow positioning */
+.modal-description {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 4rem;
+  color: white;
+  background: none;
+  border: none;
+  z-index: 2000;
+  cursor: pointer;
+}
+
+/* Arrows */
+.custom-prev,
+.custom-next {
+  font-size: 4rem;
+  color: white;
+  user-select: none;
+}
+
 .carousel-control-prev,
 .carousel-control-next {
-  width: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 10%;
 }
+
+/* Indicators */
+.custom-indicators {
+  bottom: 10px;
+}
+
+.custom-indicators li {
+  width: 40px;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  margin: 0 6px;
+}
+
+.custom-indicators .active {
+  background-color: #ffe680;
+}
+
+
+
+
+
 
 
 
